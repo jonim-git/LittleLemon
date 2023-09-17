@@ -9,7 +9,7 @@ class Booking(models.Model):
     def __str__(self):
         return self.Name  
 
-class Menu(models.Model):
+class MenuItem(models.Model):
     ID = models.AutoField(primary_key=True)
     Title = models.CharField(max_length=255)
     Price = models.DecimalField(max_digits=10, decimal_places=2)

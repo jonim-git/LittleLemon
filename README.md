@@ -1,41 +1,34 @@
 # LittleLemon
 
-Usage:
+## Usage:
 
-Registration
+### Registration
 
-Make a user in 
-http://127.0.0.1:8000/admin/
+1. Create a user in the [admin panel](http://127.0.0.1:8000/admin/).
 
-Make a post request with the user information you just made
-http://127.0.0.1:8000/restaurant/api-token-auth/
+2. Make a POST request with the user information you just created to obtain an authentication token.
 
-Example:
+   API Endpoint: [http://127.0.0.1:8000/restaurant/api-token-auth/](http://127.0.0.1:8000/restaurant/api-token-auth/)
 
-{
-	"username":"testuser",
-	"password":"password123!"
-}
+   Example Request Body:
+   ```json
+   {
+       "username": "testuser",
+       "password": "password123!"
+   }
 
-Use the token from the response to retrieve items from bookings endpoint
+Use the token from the response to access protected endpoints.
 
-menu items:
-get/post
-http://127.0.0.1:8000/restaurant/menu/2
+**Menu Items:**
+- **Get/Post Menu Items:**
+  - API Endpoint: [http://127.0.0.1:8000/restaurant/menu/2](http://127.0.0.1:8000/restaurant/menu/2)
 
-single menu item:
-get/ put/ delete
-http://127.0.0.1:8000/restaurant/menu/1
+- **Single Menu Item (Get/Put/Delete):**
+  - API Endpoint: [http://127.0.0.1:8000/restaurant/menu/1](http://127.0.0.1:8000/restaurant/menu/1)
 
-Bookings:
+**Bookings:**
+- **All Bookings (Get/Post):**
+  - API Endpoint: [http://127.0.0.1:8000/restaurant/booking/tables/](http://127.0.0.1:8000/restaurant/booking/tables/)
 
-All bookings
-get/post
-http://127.0.0.1:8000/restaurant/booking/tables/
-
-Single booking
-get/put/delete
-http://127.0.0.1:8000/restaurant/booking/tables/2/
-
-
-
+- **Single Booking (Get/Put/Delete):**
+  - API Endpoint: [http://127.0.0.1:8000/restaurant/booking/tables/2/](http://127.0.0.1:8000/restaurant/booking/tables/2/)
